@@ -1,38 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Java train</title>
-</head>
-<body>
-
-    <h1>Benvenuto su Java Train</h1>
-    <h2>Compila il form qui sotto per calcolare il tuo biglietto</h2>
-
-    <form id="form">
-        <input 
-        id="kilometri"
-        type="text"
-        class="form-control"
-        placeholder="Inserisci i kilometri"
-        required
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><i class="fa-solid fa-train-subway"></i
+        ></a>
+        <a class="navbar-brand" href="#">Java Train</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-        <input 
-        id="eta"
-        type="text"
-        class="form-control"
-        placeholder="Inserisci la tua età"
-        required
-        >
-        <button type="submit">Calcola Prezzo</button>
-      </form>
-
-      <div id="div">
-
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+          </ul>
+        </div>
       </div>
-
+    </nav>
+    <div class="container">
+      <h1>Benvenuto su Java Train</h1>
+      <h2>Compila il form qui sotto per calcolare il tuo biglietto</h2>
+      <form id="form">
+        <div class="mb-3">
+          <label class="form-label"
+            >Kilometri da effettuare</label
+          >
+          <input
+            id="kilometri"
+            type="text"
+            class="form-control"
+            placeholder="Inserisci i kilometri"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Eta</label>
+          <input
+          id="eta"
+          type="text"
+          class="form-control"
+          placeholder="Inserisci la tua età"
+          required
+          />
+        </div>
+        <button type="submit" class="btn btn-dark">Calcola Prezzo</button>
+      </form>
+      <div id="div"></div>
+    </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

@@ -24,6 +24,6 @@ event.preventDefault();
     const prezzoBiglietto = calcoloPrezzoBiglietto(kilometri,eta)
     const div = document.getElementById("div");
     const h2 = document.createElement('h2');
-    h2.innerHTML = prezzoBiglietto
+    h2.innerHTML = "Hai selezionato la tratta per " + kilometri + " Kilometri, e la tua età è di " + eta + " e il prezzo finale è di : " + prezzoBiglietto
     div.appendChild(h2);
 }
