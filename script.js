@@ -6,14 +6,24 @@ let prezzoInziale=0;
 function calcoloPrezzoBiglietto(kilometri,eta){
     prezzoInziale= kilometri * prezzoPerKm
     if (eta > 65) {
-        return prezzoInziale - (prezzoInziale * scontoOver65);
+        return prezzoInziale - (prezzoInziale * scontoOver65) + "€";
     } else if (eta < 18) {
-        return prezzoInziale - (prezzoInziale * scontoMinori);
+        return prezzoInziale - (prezzoInziale * scontoMinori) + "€";
     } else {
-        return prezzoInziale;
+        return prezzoInziale + "€";
     }
 }
 
-console.log(calcoloPrezzoBiglietto(21,5))
-console.log(calcoloPrezzoBiglietto(21,67))
-console.log(calcoloPrezzoBiglietto(21,22))
+const form = document.getElementById("form");
+form.addEventListener("submit", addItem);
+
+function addItem(event){
+event.preventDefault();
+    const kilometri = document.getElementById("kilometri").value;
+    const eta = document.getElementById("eta").value;
+    const prezzoBiglietto = calcoloPrezzoBiglietto(kilometri,eta)
+    const div = document.getElementById("div");
+    const h2 = document.createElement('h2');
+    h2.innerHTML = prezzoBiglietto
+    div.appendChild(h2);
+}
